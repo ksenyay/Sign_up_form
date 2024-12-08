@@ -1,0 +1,240 @@
+
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  /* 2. Remove default margin */
+  * {
+    margin: 0;
+  }
+  
+  body {
+    /* 3. Add accessible line-height */
+    line-height: 1.5;
+    /* 4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  /* 5. Improve media defaults */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  /* 6. Inherit fonts for form controls */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  
+  /* 7. Avoid text overflows */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+  /* 8. Improve line wrapping */
+  p {
+    text-wrap: pretty;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+  
+  /*
+    9. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+/* FONTS */
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@100..900&family=Montserrat:ital@0;1&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+@font-face {
+    font-family: "ScandinavianFont";
+    src: url(fonts/Norse-Bold.woff2) format("woff2");
+    font-weight: normal;
+    font-size: 100%;
+}
+
+/* GENERAL */
+
+:root {
+    --green-color: #596D48;
+    --yellow-color: #e6ffca;
+    --main-color: #424242;
+    --text-color: #525252;
+    --input-color: #E5E7EB;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    font: 16px;
+    color: var(--main-color);
+    font-family: "Montserrat", sans-serif;
+}
+
+/* LEFT SIDE CUSTOMIZATION */
+
+#left-side {
+    background-image: url(img/flowers.jpg);
+    background-size: cover;
+    min-height: 100vh;
+    flex-basis: 35%;
+    min-width: 500px;
+    position: relative;
+    align-content: end;
+    color: white;
+}
+
+#left-side a {
+    color: var(--yellow-color);
+    text-decoration: none;
+}
+
+#left-side a:hover {
+    color: white;
+}
+
+#left-side > p {
+    text-align: center;
+    padding: 5px;
+}
+
+img {
+    width: 80px;
+}
+
+#logo-section {
+    position: absolute;
+    top: 250px;
+    color: white;
+    font-size: 5em;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(12, 13, 19, 0.3);
+    padding: 10px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo > * {
+    vertical-align: middle;
+    font-family: "ScandinavianFont";
+}
+
+/* RIGHT SIDE CUSTOMIZATION */
+
+#right-side {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* FORM */
+
+#form-container {
+    background-color: white;
+    box-shadow: 1px 3px 10px rgb(206, 206, 206);
+    flex: 2;
+    padding: 30px 80px;
+}
+
+#form-container > h2 {
+    font-size: 2em;
+    padding: 5px 0 5px 0;
+}
+
+form {
+    display: flex;
+    gap: 100px;
+}
+
+.text-container {
+    flex: 2;
+}
+
+#form-first > div, #form-second > div {
+    padding: 7px 0;
+}
+
+input {
+    width: 300px;
+    border: 1px solid rgb(224, 224, 224);
+    border-radius: 5px;
+    color: var(--text-color);
+}
+
+input:focus {
+    outline: none !important;
+    border-color: #61adff;
+    box-shadow: 0 0 10px #cecece;
+} 
+
+input:invalid {
+    outline: none !important;
+    border-color: red;
+    box-shadow: 0 0 10px #cecece;
+}
+
+label {
+    font-size: 0.8em;
+    color: var(--text-color);
+}
+
+/* TEXT CONTAINERS */
+
+.text-container {
+    padding: 0 80px;
+}
+
+#bottom-text {
+    padding-top: 50px;
+}
+
+button {
+    box-sizing: content-box;
+    margin-bottom: 25px;
+    padding: 12px 40px;
+    border-radius: 7px;
+    color: white;
+    background-color: var(--green-color);
+    border: none;
+    font-weight: 700;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #6c805d;
+}
+
+
+.text-container a {
+    color: var(--green-color);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+#upper_text {
+    margin-top: 60px;
+    font-size: 1.5em;
+}
+
+#upper_text > p {
+    padding: 15px 0;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.bold {
+    font-weight: 600;
+}
